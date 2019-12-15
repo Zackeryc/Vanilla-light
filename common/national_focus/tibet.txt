@@ -1,0 +1,527 @@
+focus_tree = {
+	id = tibet_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TIB
+			has_dlc = "Man the Guns"
+		}
+	}
+	
+	
+		focus = {
+		id = TIB_anti_meme1
+		icon = GFX_goal_generic_consumer_goods
+	
+		
+		x = 10
+		y = 0
+		cost = 3
+
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		
+			hidden_effect = {
+			ETH = { transfer_state = 650 add_state_core = 650 }
+			}
+		
+		ENG = { country_event = { id = britain.16 }}		
+		}
+		}
+		
+		focus = {
+		id = TIB_anti_meme2
+		icon = GFX_goal_generic_consumer_goods
+	
+		
+		x = 0
+		y = 1
+		cost = 14
+
+						prerequisite = { focus = TIB_anti_meme1 }
+		relative_position_id = TIB_anti_meme1
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		
+		hidden_effect = {
+		USA = { 
+	diplomatic_relation = {
+    country = ENG
+    relation = military_access
+    active = yes  }  }
+	
+			ENG = { 
+	diplomatic_relation = {
+    country = USA
+    relation = military_access
+    active = yes  }  }
+
+					MEX = { 
+	diplomatic_relation = {
+    country = ENG
+    relation = military_access
+    active = yes  }  }
+	
+		ENG = { 
+	diplomatic_relation = {
+    country = MEX
+    relation = military_access
+    active = yes  }  }
+	
+		BRA = { 
+	diplomatic_relation = {
+    country = ENG
+    relation = military_access
+    active = yes  }  }
+	
+		ENG = { 
+	diplomatic_relation = {
+    country = BRA
+    relation = military_access
+    active = yes  }  }
+	
+			SIA = { 
+	diplomatic_relation = {
+    country = JAP
+    relation = military_access
+    active = yes  }  }
+	
+		JAP = { 
+	diplomatic_relation = {
+    country = SIA
+    relation = military_access
+    active = yes  }  }
+	
+				SIA = { 
+	diplomatic_relation = {
+    country = MAN
+    relation = military_access
+    active = yes  }  }
+	
+		MAN = { 
+	diplomatic_relation = {
+    country = SIA
+    relation = military_access
+    active = yes  }  }
+	
+	ENG = { 
+	diplomatic_relation = {
+    country = PHI
+    relation = military_access
+    active = yes  }  }
+	
+	PHI = { 
+	diplomatic_relation = {
+    country = ENG
+    relation = military_access
+    active = yes  }  }
+		}
+		
+	
+		
+		
+		ENG = { country_event = { id = mtg_britain.1 }}
+		ENG = { news_event = { id = mtg_news.61 }}
+		ITA = { news_event = { id = mtg_news.61 }}
+		USA = { news_event = { id = mtg_news.61 }}
+		FRA = { news_event = { id = mtg_news.61 }}
+		JAP = { news_event = { id = mtg_news.61 }}
+		}
+		}
+	
+	
+		focus = {
+		id = TIB_anti_meme
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 11.5
+		
+				prerequisite = { focus = TIB_anti_meme2 }
+		relative_position_id = TIB_anti_meme2
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		if = { limit = { YUG = { is_ai = no}} YUG = { set_rule = { can_send_volunteers = yes }}
+  }
+		PRU = { set_rule = { can_join_factions = no }}
+		VEN = { set_rule = { can_join_factions = no }}
+		IRQ = { set_rule = { can_join_factions = no }}
+		PER = { set_rule = { can_join_factions = no }}
+		ARG = { set_rule = { can_join_factions = no }}
+		TIB = { set_rule = { can_join_factions = no }}
+		IRQ = { set_rule = { can_send_volunteers = no }}
+		if = {
+		limit = { NOR = { is_ai = no }}
+		NOR = { set_rule = { can_join_factions = no }}
+		}
+		SPR = { country_event = { id = spain.1 } }
+		MEX = { country_event = mexico.15 }
+		
+		if = { 
+		 limit =  
+		{ ETH = 
+		{ is_subject = yes }
+		}
+		
+		
+		ETH = {   
+		retire_country_leader = yes
+		create_country_leader = {
+		name = "Radolfo Graziani"
+		desc = "POLITICS_RADOLFO_GRAZIANI_DESC"
+		picture = "portrait_italy_radolfo_graziani.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				#
+			}		
+		}
+		}
+		}
+		}
+		}
+		
+		
+		
+			focus = {
+		id = TIB_resource4
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 24
+		prerequisite = { focus = TIB_anti_meme }
+		relative_position_id = TIB_anti_meme
+		available_if_capitulated = yes
+	
+		completion_reward = {
+				MEX = { country_event = mexico.17 }
+		}
+		}
+		
+		focus = {
+		id = TIB_resource11
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 1
+		prerequisite = { focus = TIB_resource4 }
+		relative_position_id = TIB_resource4
+		available_if_capitulated = yes
+	
+		completion_reward = {
+					SOV = { country_event = { id = soviet.18 days = 1 } }
+				if = { 
+				limit = { CHI = { is_ai = yes owns_state = 622 }}
+				CHI = { add_ideas = CHI_cheap_guns }
+				JAP = { add_ideas = CHI_kill_china }
+				}
+		}
+		}
+		
+		focus = {
+		id = TIB_resource5
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = TIB_resource11 }
+		relative_position_id = TIB_resource11
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		MEX = { country_event = mexico.27 }
+		}
+		}
+		
+				focus = {
+		id = TIB_resource312
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = TIB_resource5 }
+		relative_position_id = TIB_resource5
+		available_if_capitulated = yes
+	
+		completion_reward = {		
+					ENG = { country_event = { id = britain.22 }}
+				}
+				}
+			
+		
+		
+		
+		
+		
+		focus = {
+		id = TIB_resource3
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 30
+		prerequisite = { focus = TIB_resource312 }
+		relative_position_id = TIB_resource312
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		
+		USA = { news_event = { id = news.48 } } 
+			if = { 
+		 limit =  
+		{ ETH = 
+		{ is_subject = yes }
+		}
+		
+		
+		ETH = {   
+		retire_country_leader = yes
+		create_country_leader = {
+		name = "Prince Amedeo"
+		desc = "POLITICS_PRINCE_AMEDEO_DESC"
+		picture = "Portrait_Italy_Amedeo_Savoia_Aosta.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				#
+			}		
+		}
+		}
+		}
+		}
+		}
+		
+			focus = {
+		id = TIB_resource3332
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TIB_resource3 }
+		relative_position_id = TIB_resource3
+		available_if_capitulated = yes
+	
+		cost = 5
+		completion_reward = {
+		GER = { add_timed_idea = { idea = YUG_air_payment days = 182 } }
+		ITA = { add_timed_idea = { idea = YUG_air_payment days = 182 } }
+		FRA = { add_timed_idea = { idea = YUG_air_payment days = 182 } }
+		ENG = { add_timed_idea = { idea = YUG_air_payment days = 182 } }
+		}
+		}
+
+		
+			focus = {
+		id = TIB_resource1337
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 32
+		prerequisite = { focus = TIB_resource3332 }
+		relative_position_id = TIB_resource3332
+		available_if_capitulated = yes
+	
+		completion_reward = {
+
+		if = { 
+		limit = {            
+		SOV = {
+		focus_progress = {
+    focus = SOV_great_purge
+    progress < 0.001
+}
+		
+		
+		}
+		
+		}
+		SOV = { add_ideas = SOV_purge_now_plz }
+		
+		}
+		
+		
+		}
+		}
+		
+	focus = {
+		id = TIB_resource1338
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = TIB_resource1337 }
+		relative_position_id = TIB_resource1337
+		available_if_capitulated = yes
+	
+		completion_reward = {
+
+		if = { 
+		limit = {            
+		SOV = {
+		focus_progress = {
+    focus = SOV_great_purge
+    progress > 0.001
+}
+		
+		
+		}
+		
+		}
+		SOV = { remove_ideas = SOV_purge_now_plz }
+		
+		}
+		
+		
+		}
+		}
+		
+		
+		
+		focus = {
+		id = TIB_resource2
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 40
+		prerequisite = { focus = TIB_resource1338 }
+		relative_position_id = TIB_resource1338
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		TUR = { country_event = turkey.1 }
+		country_event = MTG_naval_treaty.10
+		
+		
+		
+		}
+		}
+		
+					focus = {
+		id = TIB_resource20
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 9
+		prerequisite = { focus = TIB_resource2 }
+		relative_position_id = TIB_resource2
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		
+		}
+		}
+		
+		
+		
+		
+			focus = {
+		id = TIB_resource
+		icon = GFX_goal_generic_consumer_goods
+	
+		x = 0
+		y = 1
+		cost = 25.4
+		prerequisite = { focus = TIB_resource20 }
+		relative_position_id = TIB_resource20
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		
+		NZL = { country_event = { id = tfv_new_zealand.7 }}
+			
+		}
+	
+		}
+		
+			focus = {
+		id = TIB_iraq
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TIB_resource }
+		x = 0
+		y = 1
+		cost = 20
+		relative_position_id = TIB_resource
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		
+		if = { limit = { POL = { controls_state = 96}  }
+		SOV = { transfer_state = 784  
+		transfer_state = 96
+		transfer_state = 95
+		transfer_state = 94
+		transfer_state = 93
+		transfer_state = 91
+		transfer_state = 89
+		}
+		
+		}
+		
+		
+		if = { 
+		limit = { RAJ = { has_idea = RAJ_risk_of_famine }}
+		RAJ = { country_event = { id = tfv_raj.21 }}
+		}
+		if = { 
+		limit = { 
+		IRQ = { OR = { NOT = { has_idea = IRQ_ali_hussein } AND = { is_ai = yes is_subject = no }}}
+		}
+		ENG = { diplomatic_relation = {
+    country = IRQ
+    relation = guarantee
+    active = no
+}}
+		IRQ = { country_event = { id = iraq.1 }}
+				}
+						IRQ = { set_country_flag = IRQ_fascism 
+				remove_ideas = IRQ_oil 
+				remove_ideas = IRQ_fasc }
+		
+		ENG = { remove_ideas = IRQ_oil2 }
+		SOV = { country_event = news.37 }
+					
+		}
+		}
+		
+	
+		focus = {
+		id = TIB_nothing
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TIB_iraq }
+		x = 0
+		y = 1
+		cost = 126
+		relative_position_id = TIB_iraq
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		if = { 
+		limit = { MEX = { has_government = democratic  } }
+		MEX = { country_event = mexico.32 } 
+		
+		
+		}
+		}
+	
+		}
+	
+}

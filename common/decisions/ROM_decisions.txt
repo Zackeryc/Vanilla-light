@@ -1,0 +1,131 @@
+political_actions = {
+	
+}
+
+economy_decisions = {
+
+	
+}
+
+
+
+
+operations = {
+	
+	
+}
+
+
+
+war_measures = {
+	
+	
+}
+
+foreign_politics = {
+	
+}
+
+economy_decisions = {
+	
+}
+
+foreign_support = {
+	
+
+}
+
+ROM_Inudstrial_Development = {
+
+	ROM_Develop_Transylvania = {
+	    icon = oppression
+		available = {
+		    date > 1936.1.1
+		}
+		visible = {
+		    always = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		remove_effect = {
+		    76 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+		remove_effect = {
+		    84 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+		remove_effect = {
+		    83 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+	    days_remove = 30
+	}
+	
+	ROM_Develop_Muntenia = {
+	    icon = oppression
+		available = {
+		    date > 1936.1.1
+		}
+		visible = {
+		    always = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		remove_effect = {
+		    46 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+		remove_effect = {
+		    81 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+		remove_effect = {
+		    79 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+	    days_remove = 30
+	}
+}	

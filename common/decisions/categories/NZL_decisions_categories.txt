@@ -1,0 +1,9 @@
+NZL_Inudstrial_Development = {
+    allowed = {
+	    original_tag = NZL
+	}
+	visible = {
+	    always = yes
+	}
+	icon = generic_propaganda
+}

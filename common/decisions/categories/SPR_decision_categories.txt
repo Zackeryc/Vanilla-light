@@ -1,0 +1,9 @@
+SPR_Inudstrial_Development = {
+    allowed = {
+	    original_tag = SPR
+	}
+	visible = {
+	    always = yes
+	}
+	icon = generic_propaganda
+}

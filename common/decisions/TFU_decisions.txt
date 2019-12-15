@@ -1,0 +1,363 @@
+foreign_politics = {
+
+GDU_JAP_pearl_harbor = { 
+	
+		icon = generic_operation
+		fire_only_once = yes
+		
+		allowed = { 
+			tag = JAP 
+		}
+	
+		available = { 
+			has_completed_focus = JAP_strike_on_the_southern_resource_area
+			NOT = { has_war_with = USA } 
+			NOT = { has_war_with = ENG } 
+		}	
+	
+		cost = 0
+		
+		days_remove = 1
+		
+		ai_will_do = {
+			factor = 0
+			
+		}
+		
+		visible = { 
+			has_completed_focus = JAP_strike_on_the_southern_resource_area  
+		}
+		
+		remove_effect = {
+			USA = { 
+				add_timed_idea = { 
+					idea = USA_pearl_harbor_idea 
+					days = 120
+				}
+			}
+			JAP = { 
+				add_timed_idea = { 
+					idea = JAP_pearl_harbor_idea 
+					days = 120 
+				}
+			}
+			declare_war_on = {
+				target = USA 
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = INS 
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PHI 
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ENG 
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FRF
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RAJ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NZL 
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SAF 
+				type = annex_everything
+			}
+			GER = {	
+				declare_war_on = {
+					target = USA 
+					type = annex_everything
+				}
+			}
+			ITA = {	
+				declare_war_on = {
+					target = USA 
+					type = annex_everything
+				}
+			}
+			ROM = {	
+				declare_war_on = {
+					target = USA 
+					type = annex_everything
+				}
+			}
+			HUN = {	
+				declare_war_on = {
+					target = USA 
+					type = annex_everything
+				}
+			}
+			BUL = {	
+				declare_war_on = {
+					target = USA 
+					type = annex_everything
+				}
+			}		
+		}
+	} 
+
+assume_control_crete = { 
+		icon = generic_operation
+		
+		allowed = { 
+			tag = ENG
+		}
+			
+		available = { 
+			has_war_with = GER 
+			GRE = { has_capitulated = yes }
+			GRE = { controls_state = 182 } 
+			is_in_faction_with = GRE
+		}
+		
+		fire_only_once = yes 
+		
+	
+		
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		visible = {
+			tag = ENG 
+		}
+		
+		complete_effect = {
+			transfer_state = 182
+			ENG = { puppet = GRE }
+			hidden_effect = { 
+				GRE = { 
+					set_politics = {	
+						ruling_party = neutrality
+                }
+
+                    set_popularities = {
+                        democratic = 15
+                        fascism = 2
+                        communism = 5
+                        neutrality = 78
+                    }
+				}
+			}
+			
+		}
+	
+	}
+	
+Take_Vichy_Land = { 
+		icon = generic_operation
+		
+		allowed = { 
+			tag = ITA
+		}
+			
+		available = { 
+			has_war_with = ENG 
+			any_country = {
+				original_tag = VIC
+			}
+		}
+		
+		fire_only_once = yes 
+		
+	
+		
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		visible = {
+			tag = ITA 
+		}
+		
+		complete_effect = {
+			transfer_state = 1
+			transfer_state = 735
+			transfer_state = 21
+			transfer_state = 32
+			transfer_state = 458
+			transfer_state = 665
+			
+			
+		}
+	
+	}
+	
+	ITA_seize_syria = { 
+		icon = generic_civil_support
+		
+		allowed = { 
+			tag = ITA
+		}
+		
+		available = {
+			original_tag = ITA		
+			any_country = {
+				original_tag = VIC
+			}
+			ITA = { 
+				controls_state = 446
+				controls_state = 447
+				controls_state = 453
+				controls_state = 454 
+			}
+		}
+		
+		
+		fire_only_once = yes
+		
+		visible = {
+			original_tag = ITA
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			ITA = {
+				transfer_state = 553
+				transfer_state = 677
+				transfer_state = 680
+				transfer_state = 554
+			}
+		}
+	
+	}
+	
+Case_Anton = { 
+		icon = generic_operation
+		
+		allowed = { 
+			tag = GER
+		}
+			
+		available = { 
+			has_war_with = USA 
+            		date > 1942.1.1
+			USA = {
+				has_completed_focus = USA_Operation_Torch }
+		}
+		
+		
+		fire_only_once = yes 
+		
+	
+		
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		visible = {
+			tag = GER
+		}
+		
+		complete_effect = {
+		annex_country = {
+				target = VIC
+				transfer_troops = yes
+			}
+			
+		}
+	
+	}
+	
+Annex_East_Indies = { 
+		icon = generic_operation
+		
+		allowed = { 
+			tag = ENG
+		}
+			
+		available = { 
+			date > 1940.10.1
+		}
+		
+		fire_only_once = yes 
+		
+	
+		
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		visible = {
+			tag = ENG
+		}
+		
+		complete_effect = {
+		annex_country = {
+				target = INS
+				transfer_troops = yes
+			}
+			
+		}
+}
+
+Annex_China = { 
+		icon = generic_operation
+		
+		allowed = { 
+			tag = JAP
+		}
+		available = {
+			controls_state = 608
+		}
+		visible = {
+			tag = JAP
+		}
+		fire_only_once = yes
+		days_mission_timeout = 180
+		activation = { 
+			CHI_annex = yes
+		}
+		timeout_effect = {
+			annex_country = {
+				target = CHI
+				transfer_troops = no
+			}
+			JAP = {
+				air_experience = 300
+			}
+			USA = {
+				air_experience = 300
+			}
+			GER = {
+				air_experience = 300
+			}
+			ITA = {
+				air_experience = 300
+			}
+			SOV = {
+				air_experience = 300
+			}
+			ENG = {
+				air_experience = 150
+			}
+			FRA = {
+				air_experience = 100
+			}
+		}
+    }
+}
+
+	
+

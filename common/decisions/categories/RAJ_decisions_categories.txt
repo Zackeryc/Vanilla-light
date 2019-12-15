@@ -1,0 +1,9 @@
+RAJ_Inudstrial_Development = {
+    allowed = {
+	    original_tag = RAJ
+	}
+	visible = {
+	    always = yes
+	}
+	icon = generic_propaganda
+}

@@ -1,0 +1,55 @@
+ideas = {
+	country = {
+		rubber_surplus = {
+			picture = FRA_motorized_focus
+			modifier = {
+				production_speed_synthetic_refinery_factor = -1.00
+			}
+		}
+	}
+	
+	country = {
+		i_am_ai = {
+		    picture = generic_goods_red_bonus
+			modifier = {
+				production_speed_arms_factory_factor = -2.0
+				production_speed_dockyard_factor = -2.0
+				production_speed_naval_base_factor = -2.0
+				production_speed_coastal_bunker_factor = -2.0
+				production_speed_bunker_factor = -2.0
+				production_speed_air_base_factor = -2.0
+				production_speed_anti_air_building_factor = -2.0
+				production_speed_radar_station_factor = -2.0
+				production_speed_fuel_silo_factor = -2.0
+				production_speed_synthetic_refinery_factor = -2.0
+				political_power_cost = 2.75
+				production_factory_efficiency_gain_factor = -2.0
+				production_speed_industrial_complex_factor = -2.0
+				conscription = -0.99
+			}
+		}
+	}
+	
+	country = {
+		i_am_ai_V2 = {
+		    picture = generic_goods_red_bonus
+			modifier = {
+				
+				conscription_factor = -0.90
+			}
+		}
+	}
+	
+	country = {
+		Shattered_Retreat= {
+		    picture = generic_goods_red_bonus
+			modifier = {
+				army_morale_factor = 0.15
+				army_org_Factor = -0.05
+				army_speed_factor = 0.075
+			}
+		}
+	}
+	
+}
+	

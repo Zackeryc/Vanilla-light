@@ -1,0 +1,84 @@
+political_actions = {
+	
+}
+
+economy_decisions = {
+
+	
+}
+
+
+
+
+operations = {
+	
+	
+}
+
+
+
+war_measures = {
+	
+	
+}
+
+foreign_politics = {
+	
+}
+
+economy_decisions = {
+	
+}
+
+foreign_support = {
+	
+
+}
+
+BUL_Inudstrial_Development = {
+
+BUL_Develop_The_Captial = {
+	    icon = oppression
+		available = {
+		    date > 1936.1.1
+		}
+		visible = {
+		    always = yes
+		}
+		fire_only_once = yes
+		cost = 100
+		remove_effect = {
+		    48 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+		remove_effect = {
+		    48 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+		remove_effect = {
+		    48 = {
+			    add_extra_state_shared_building_slots = 1
+			    add_building_construction = {
+			        type = industrial_complex
+			        level = 1
+			        instant_build = yes
+			    }
+			
+			}
+		}
+	    days_remove = 30
+	}

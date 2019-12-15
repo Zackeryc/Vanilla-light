@@ -1,0 +1,17 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			##### Turning King Edward's abdication into an on_startup event instead of MTTH to help performance####
+			ENG = {
+				country_event = { id = britain.16 days = 20 } 
+				country_event = { id = mtg_britain.1 days = 190 }			
+			}
+			PER = {
+				give_resource_rights = { receiver = ENG state = 412 }
+				give_resource_rights = { receiver = ENG state = 413 }
+				give_resource_rights = { receiver = ENG state = 411 }
+				give_resource_rights = { receiver = ENG state = 421 }
+			}
+		}
+	}
+}

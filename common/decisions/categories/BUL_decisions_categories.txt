@@ -1,0 +1,9 @@
+BUL_Inudstrial_Development = {
+    allowed = {
+	    original_tag = BUL
+	}
+	visible = {
+	    always = yes
+	}
+	icon = generic_propaganda
+}

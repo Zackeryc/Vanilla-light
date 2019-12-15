@@ -1,0 +1,25 @@
+focus_tree = {
+	id = turkey_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = { 
+			tag = TUR
+			tag = SWE
+			tag = SWI
+			tag = GUA
+			tag = SAU
+			tag = VEN
+			tag = PRU
+			tag = ARG
+			tag = CUB
+			tag = PER
+				}
+		}
+	}
+	
+	default = no
+	
+}

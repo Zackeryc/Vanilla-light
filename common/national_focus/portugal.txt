@@ -1,0 +1,25 @@
+focus_tree = {
+	id = Portugal_focus
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			original_tag = POR
+		}
+	}
+	
+	focus = {
+		id = Portugal_AI
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 0
+		cost = 1000
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_stability = -100
+		}
+	}

@@ -1,0 +1,9 @@
+AST_Inudstrial_Development = {
+    allowed = {
+	    original_tag = AST
+	}
+	visible = {
+	    always = yes
+	}
+	icon = generic_propaganda
+}
